@@ -1,10 +1,10 @@
 {
   "type": "panel",
-  "name": "ES Bar Prak",
-  "id": "id-es-bar-praktiker",
+  "name": "ES Bar Day",
+  "id": "id-es-bar-day",
   "dataFormats": ["table"],
   "info": {
-    "description": "ES Bar Prak",
+    "description": "ES Bar Day",
     "author": {
       "name": "Nam Le"
     },

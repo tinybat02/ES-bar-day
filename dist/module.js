@@ -47766,7 +47766,7 @@ function (_super) {
         top: 50,
         right: 130,
         bottom: 50,
-        left: 60
+        left: 80
       },
       padding: 0.3,
       groupMode: "grouped",
@@ -47980,16 +47980,16 @@ var processData = function processData(series) {
 };
 var formatTick = function formatTick(epoch, timezone, length) {
   var datetime = dayjs__WEBPACK_IMPORTED_MODULE_1___default()(epoch).tz(timezone);
-  if (length <= 30) return datetime.format('HH:mm');
+  if (length <= 30) return datetime.format('DD/MM');
 
   if (length <= 85) {
-    if (datetime.minute() == 0) return datetime.format('HH:mm');else return '';
+    if (datetime.date() == 10 || datetime.date() == 20 || datetime.date() == 30) return datetime.format('DD/MM');else return '';
   }
 
-  if (datetime.hour() == 0 && datetime.minute() == 0) return datetime.format('DD/MM 00:00');else return '';
+  if (datetime.date() == 1) return datetime.format('DD/MM');else return '';
 };
 var formalFullEpoch = function formalFullEpoch(epoch, timezone) {
-  return dayjs__WEBPACK_IMPORTED_MODULE_1___default()(epoch).tz(timezone).format('DD/MM HH:mm');
+  return dayjs__WEBPACK_IMPORTED_MODULE_1___default()(epoch).tz(timezone).format('DD/MM/YYYY');
 };
 
 /***/ }),
